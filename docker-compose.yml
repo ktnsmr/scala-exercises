@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: hseeberger/scala-sbt
+    hostname: scala
+    container_name: scala
+    volumes:
+     - ./:/home/app/
+    working_dir: /home/app/
+    command: bash -c "while :; do echo 1 > /dev/null; done"
